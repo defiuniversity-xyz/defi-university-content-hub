@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeFi University Content Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Main Content */
+        main {
+            background: white;
+            padding: 60px 20px;
+            margin-top: -40px;
+            border-radius: 40px 40px 0 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+
+        /* Course Grid */
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .course-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #f0f0f0;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .course-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .course-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #667eea;
+        }
+
+        .course-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .course-link {
+            display: inline-flex;
+            align-items: center;
+            color: #667eea;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .course-link:hover {
+            color: #764ba2;
+        }
+
+        .course-link::after {
+            content: '→';
+            margin-left: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .course-link:hover::after {
+            transform: translateX(4px);
+        }
+
+        /* Why Section */
+        .why-section {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 60px 20px;
+            border-radius: 20px;
+            margin: 4rem 0;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .why-item {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .why-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .why-item p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Getting Started */
+        .getting-started {
+            text-align: center;
+            padding: 40px 20px;
+            background: white;
+            border-radius: 20px;
+            margin: 4rem 0;
+        }
+
+        .getting-started h3 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+
+        .steps {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .step {
+            flex: 1;
+            min-width: 200px;
+            max-width: 300px;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 12px;
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #667eea;
+            color: white;
+            border-radius: 50%;
+            line-height: 40px;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .step h4 {
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .step p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 2rem 20px;
+            margin-top: 4rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .courses-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .steps {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">DeFi University</div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>DeFi University Content Hub</h1>
+            <p>Your comprehensive gateway to DeFi education. Master the skills you need to navigate decentralized finance with confidence.</p>
+        </div>
+    </section>
+
+    <main>
+        <div class="container">
+            <h2 class="section-title">Featured Courses</h2>
+            
+            <div class="courses-grid">
+                <a href="/investor-mindset" class="course-card">
+                    <h3>Investor Mindset</h3>
+                    <p>Master the psychological and strategic aspects of DeFi investing. Learn to evaluate opportunities, manage risk, and build a sustainable investment strategy.</p>
+                    <span class="course-link">Explore Investor Mindset</span>
+                </a>
+
+                <a href="/liquidity-provision" class="course-card">
+                    <h3>Liquidity Provision</h3>
+                    <p>Learn how to provide liquidity and earn yield in DeFi protocols. Understand impermanent loss, risk management, and optimization strategies.</p>
+                    <span class="course-link">Explore Liquidity Provision</span>
+                </a>
+
+                <a href="/money-markets" class="course-card">
+                    <h3>Money Markets</h3>
+                    <p>Understand money markets, lending, and borrowing in DeFi. Learn about interest rates, collateralization, and yield optimization.</p>
+                    <span class="course-link">Explore Money Markets</span>
+                </a>
+
+                <a href="/perpetual-futures" class="course-card">
+                    <h3>Perpetual Futures Trading</h3>
+                    <p>Master perpetual futures trading strategies and risk management. Learn leverage, funding rates, and advanced trading techniques.</p>
+                    <span class="course-link">Explore Perpetual Futures</span>
+                </a>
+            </div>
+
+            <div class="why-section">
+                <h2 class="section-title">Why DeFi University?</h2>
+                <div class="why-grid">
+                    <div class="why-item">
+                        <h4>Comprehensive Curriculum</h4>
+                        <p>From basics to advanced strategies</p>
+                    </div>
+                    <div class="why-item">
+                        <h4>Practical Exercises</h4>
+                        <p>Hands-on learning with real-world applications</p>
+                    </div>
+                    <div class="why-item">
+                        <h4>Expert Guidance</h4>
+                        <p>Learn from experienced DeFi practitioners</p>
+                    </div>
+                    <div class="why-item">
+                        <h4>Community Support</h4>
+                        <p>Join a community of like-minded learners</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="getting-started">
+                <h3>Getting Started</h3>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h4>Browse Courses</h4>
+                        <p>Explore our course catalog above</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h4>Choose Your Path</h4>
+                        <p>Select the course that matches your goals</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h4>Start Learning</h4>
+                        <p>Begin your DeFi education journey today</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 DeFi University. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
