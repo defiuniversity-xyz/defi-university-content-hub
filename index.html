@@ -3,7 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DeFi University Content Hub</title>
+    <title>Master DeFi Trading - Free Course Access | DeFi University</title>
+    <meta name="description" content="Join 10,000+ students learning DeFi trading strategies. Get free access to comprehensive courses on liquidity provision, money markets, and perpetual futures.">
+    
+    <!-- Facebook Pixel -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'YOUR_PIXEL_ID'); // Replace with your Facebook Pixel ID
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"
+    /></noscript>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID'); // Replace with your GA ID
+    </script>
+    
     <style>
         * {
             margin: 0;
@@ -48,10 +76,10 @@
             color: #667eea;
         }
 
-        /* Hero Section */
+        /* Hero Section - Conversion Optimized */
         .hero {
             text-align: center;
-            padding: 80px 20px 60px;
+            padding: 60px 20px 40px;
             color: white;
         }
 
@@ -60,40 +88,64 @@
             margin-bottom: 1rem;
             font-weight: 700;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            line-height: 1.2;
         }
 
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
+        .hero .subheadline {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
             opacity: 0.95;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+            font-weight: 300;
         }
 
-        /* Email Collection Form */
-        .email-form-container {
-            background: rgba(255, 255, 255, 0.95);
+        .hero .benefit {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        /* Social Proof Badge */
+        .social-proof {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(10px);
-            border-radius: 16px;
-            padding: 2.5rem;
-            max-width: 600px;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+
+        .social-proof .number {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        /* Email Collection Form - Enhanced */
+        .email-form-container {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 3rem;
+            max-width: 650px;
             margin: 0 auto 3rem;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.3);
         }
 
         .email-form-container h2 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
             color: #333;
             text-align: center;
         }
 
-        .email-form-container p {
+        .email-form-container .form-subtitle {
             text-align: center;
             color: #666;
-            margin-bottom: 1.5rem;
-            font-size: 1rem;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
         }
 
         .email-form {
@@ -105,38 +157,42 @@
         .email-input {
             flex: 1;
             min-width: 250px;
-            padding: 1rem 1.5rem;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
+            padding: 1.2rem 1.5rem;
+            border: 3px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
         }
 
         .email-input:focus {
             outline: none;
             border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
         }
 
         .submit-btn {
-            padding: 1rem 2.5rem;
+            padding: 1.2rem 3rem;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             border: none;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: 600;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 700;
             cursor: pointer;
-            transition: transform 0.2s ease, box-shadow 0.3s ease;
+            transition: all 0.3s ease;
             white-space: nowrap;
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-2px);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
             box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
         }
 
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+        }
+
         .submit-btn:active {
-            transform: translateY(0);
+            transform: translateY(-1px);
         }
 
         .submit-btn:disabled {
@@ -168,6 +224,28 @@
             display: block;
         }
 
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .trust-badge svg {
+            width: 20px;
+            height: 20px;
+            fill: #667eea;
+        }
+
         /* Main Content */
         main {
             background: white;
@@ -181,8 +259,18 @@
         .section-title {
             text-align: center;
             font-size: 2.5rem;
-            margin-bottom: 3rem;
+            margin-bottom: 1rem;
             color: #333;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* Course Grid */
@@ -245,6 +333,40 @@
             transform: translateX(4px);
         }
 
+        /* Testimonials Section */
+        .testimonials {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 60px 20px;
+            border-radius: 20px;
+            margin: 4rem 0;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #333;
+        }
+
         /* Why Section */
         .why-section {
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
@@ -276,60 +398,6 @@
             font-size: 0.95rem;
         }
 
-        /* Getting Started */
-        .getting-started {
-            text-align: center;
-            padding: 40px 20px;
-            background: white;
-            border-radius: 20px;
-            margin: 4rem 0;
-        }
-
-        .getting-started h3 {
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            color: #333;
-        }
-
-        .steps {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-        }
-
-        .step {
-            flex: 1;
-            min-width: 200px;
-            max-width: 300px;
-            padding: 1.5rem;
-            background: #f8f9fa;
-            border-radius: 12px;
-        }
-
-        .step-number {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            background: #667eea;
-            color: white;
-            border-radius: 50%;
-            line-height: 40px;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-
-        .step h4 {
-            margin-bottom: 0.5rem;
-            color: #333;
-        }
-
-        .step p {
-            color: #666;
-            font-size: 0.9rem;
-        }
-
         /* Footer */
         footer {
             background: #2d3748;
@@ -345,8 +413,8 @@
                 font-size: 2.5rem;
             }
 
-            .hero p {
-                font-size: 1.1rem;
+            .hero .subheadline {
+                font-size: 1.2rem;
             }
 
             .email-form {
@@ -364,10 +432,6 @@
             .courses-grid {
                 grid-template-columns: 1fr;
             }
-
-            .steps {
-                flex-direction: column;
-            }
         }
     </style>
 </head>
@@ -380,12 +444,18 @@
 
     <section class="hero">
         <div class="container">
-            <h1>DeFi University Content Hub</h1>
-            <p>Your comprehensive gateway to DeFi education. Master the skills you need to navigate decentralized finance with confidence.</p>
+            <div class="social-proof">
+                <span class="number">10,000+</span>
+                <span>Students Learning DeFi</span>
+            </div>
+            
+            <h1>Master DeFi Trading Strategies</h1>
+            <p class="subheadline">Learn from Experts. Trade with Confidence.</p>
+            <p class="benefit">Get instant access to comprehensive courses on liquidity provision, money markets, and perpetual futures trading.</p>
             
             <div class="email-form-container">
-                <h2>Get Started Today</h2>
-                <p>Enter your email to access our comprehensive DeFi courses</p>
+                <h2>Get Free Access Now</h2>
+                <p class="form-subtitle">Enter your email to unlock all courses. No credit card required.</p>
                 <form id="emailForm" class="email-form">
                     <input 
                         type="email" 
@@ -396,42 +466,86 @@
                         autocomplete="email"
                     >
                     <button type="submit" class="submit-btn" id="submitBtn">
-                        Get Access
+                        Get Free Access
                     </button>
                 </form>
                 <div id="formMessage" class="form-message"></div>
+                
+                <div class="trust-badges">
+                    <div class="trust-badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <path d="M9 12l2 2 4-4"/>
+                        </svg>
+                        <span>100% Free</span>
+                    </div>
+                    <div class="trust-badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                        <span>10,000+ Students</span>
+                    </div>
+                    <div class="trust-badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        <span>No Credit Card</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <main>
         <div class="container">
-            <h2 class="section-title">Featured Courses</h2>
+            <h2 class="section-title">What You'll Learn</h2>
+            <p class="section-subtitle">Comprehensive courses covering all aspects of DeFi trading and investing</p>
             
             <div class="courses-grid">
                 <a href="/investor-mindset" class="course-card">
                     <h3>Investor Mindset</h3>
                     <p>Master the psychological and strategic aspects of DeFi investing. Learn to evaluate opportunities, manage risk, and build a sustainable investment strategy.</p>
-                    <span class="course-link">Explore Investor Mindset</span>
+                    <span class="course-link">Explore Course</span>
                 </a>
 
                 <a href="/liquidity-provision" class="course-card">
                     <h3>Liquidity Provision</h3>
                     <p>Learn how to provide liquidity and earn yield in DeFi protocols. Understand impermanent loss, risk management, and optimization strategies.</p>
-                    <span class="course-link">Explore Liquidity Provision</span>
+                    <span class="course-link">Explore Course</span>
                 </a>
 
                 <a href="/money-markets" class="course-card">
                     <h3>Money Markets</h3>
                     <p>Understand money markets, lending, and borrowing in DeFi. Learn about interest rates, collateralization, and yield optimization.</p>
-                    <span class="course-link">Explore Money Markets</span>
+                    <span class="course-link">Explore Course</span>
                 </a>
 
                 <a href="/perpetual-futures" class="course-card">
                     <h3>Perpetual Futures Trading</h3>
                     <p>Master perpetual futures trading strategies and risk management. Learn leverage, funding rates, and advanced trading techniques.</p>
-                    <span class="course-link">Explore Perpetual Futures</span>
+                    <span class="course-link">Explore Course</span>
                 </a>
+            </div>
+
+            <div class="testimonials">
+                <h2 class="section-title">What Students Say</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial">
+                        <p class="testimonial-text">"The best DeFi education I've found. The courses are comprehensive and practical."</p>
+                        <p class="testimonial-author">— Sarah M., DeFi Trader</p>
+                    </div>
+                    <div class="testimonial">
+                        <p class="testimonial-text">"Finally understand how to properly manage risk in DeFi. Game changer!"</p>
+                        <p class="testimonial-author">— Mike T., Crypto Investor</p>
+                    </div>
+                    <div class="testimonial">
+                        <p class="testimonial-text">"The liquidity provision course helped me optimize my yields significantly."</p>
+                        <p class="testimonial-author">— Alex K., LP Provider</p>
+                    </div>
+                </div>
             </div>
 
             <div class="why-section">
@@ -455,27 +569,6 @@
                     </div>
                 </div>
             </div>
-
-            <div class="getting-started">
-                <h3>Getting Started</h3>
-                <div class="steps">
-                    <div class="step">
-                        <div class="step-number">1</div>
-                        <h4>Enter Your Email</h4>
-                        <p>Get instant access to our course catalog</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">2</div>
-                        <h4>Choose Your Path</h4>
-                        <p>Select the course that matches your goals</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">3</div>
-                        <h4>Start Learning</h4>
-                        <p>Begin your DeFi education journey today</p>
-                    </div>
-                </div>
-            </div>
         </div>
     </main>
 
@@ -486,6 +579,23 @@
     </footer>
 
     <script>
+        // Track UTM parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const utmSource = urlParams.get('utm_source');
+        const utmCampaign = urlParams.get('utm_campaign');
+        
+        // Store in sessionStorage for tracking
+        if (utmSource) sessionStorage.setItem('utm_source', utmSource);
+        if (utmCampaign) sessionStorage.setItem('utm_campaign', utmCampaign);
+        
+        // Track Facebook Pixel event
+        if (typeof fbq !== 'undefined') {
+            fbq('track', 'ViewContent', {
+                content_name: 'Landing Page',
+                content_category: 'DeFi Education'
+            });
+        }
+
         // Email form submission
         document.getElementById('emailForm').addEventListener('submit', async function(e) {
             e.preventDefault();
@@ -502,35 +612,56 @@
                 return;
             }
             
+            // Track conversion
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Lead', {
+                    content_name: 'Email Submission',
+                    value: 0.00,
+                    currency: 'USD'
+                });
+            }
+            
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'generate_lead', {
+                    'event_category': 'engagement',
+                    'event_label': 'Email Form Submission'
+                });
+            }
+            
             // Disable button and show loading
             submitBtn.disabled = true;
-            submitBtn.textContent = 'Submitting...';
+            submitBtn.textContent = 'Redirecting...';
             formMessage.textContent = '';
             formMessage.className = 'form-message';
             
             try {
                 // Redirect to Auth0 registration with email pre-filled
-                // This will collect email via Auth0, which auto-syncs to HubSpot
                 const auth0Domain = 'dev-ptjdpk2ixqlnyzz3.us.auth0.com';
                 const clientId = 'VbblEaJU2AoSjOl8cZ7gG9cAdgbPwWHi';
-                const redirectUri = encodeURIComponent('https://docs.defiuniversity.xyz/login/callback');
+                const redirectUri = encodeURIComponent('https://courses.defiuniversity.xyz/login/callback');
                 const emailParam = encodeURIComponent(email);
+                
+                // Add UTM parameters to redirect
+                let redirectUrl = `https://${auth0Domain}/authorize?response_type=code&client_id=${clientId}&redirect_uri=${redirectUri}&scope=openid profile email&screen_hint=signup&login_hint=${emailParam}`;
+                
+                if (utmSource) redirectUrl += `&state=${encodeURIComponent(JSON.stringify({utm_source: utmSource, utm_campaign: utmCampaign}))}`;
                 
                 // Show success message
                 formMessage.textContent = 'Redirecting to registration...';
                 formMessage.className = 'form-message success';
                 
                 // Redirect to Auth0 registration
-                window.location.href = `https://${auth0Domain}/authorize?response_type=code&client_id=${clientId}&redirect_uri=${redirectUri}&scope=openid profile email&screen_hint=signup&login_hint=${emailParam}`;
+                window.location.href = redirectUrl;
                 
             } catch (error) {
                 console.error('Error:', error);
                 formMessage.textContent = 'Something went wrong. Please try again.';
                 formMessage.className = 'form-message error';
                 submitBtn.disabled = false;
-                submitBtn.textContent = 'Get Access';
+                submitBtn.textContent = 'Get Free Access';
             }
         });
     </script>
 </body>
 </html>
+
